@@ -1,0 +1,118 @@
+<Data>
+	<TiposTarifa>
+		<TipoTarifa Id="1" Nombre="Economico Regular"/>
+		<TipoTarifa Id="2" Nombre="Economico Familiar"/>
+		<TipoTarifa Id="3" Nombre="MedioCaro Regular"/>
+		<TipoTarifa Id="4" Nombre="MedioCaro Familiar"/>
+		<TipoTarifa Id="5" Nombre="Premium Regular"/>
+		<TipoTarifa Id="6" Nombre="Premium Familiar"/>
+		<TipoTarifa Id="7" Nombre="Numero 800"/>
+		<TipoTarifa Id="8" Nombre="Numero 900"/>	
+	</TiposTarifa>
+
+	<TiposUnidades>
+		<TipoUnidad Id="1" Tipo="Monetario"/>
+		<TipoUnidad Id="2" Tipo="Cantidad dias"/>
+		<TipoUnidad Id="3" Tipo="Porcentaje"/>
+		<TipoUnidad Id="4" Tipo="Minutos"/>
+		<TipoUnidad Id="5" Tipo="Gigas"/>
+	</TiposUnidades>
+
+	<TiposElemento>
+		<TipoElemento Id="1" Nombre="Tarifa Base" IdTipoUnidad="1" EsFijo="0"/>
+		<TipoElemento Id="2" Nombre="Minutos Base" IdTipoUnidad="4" EsFijo="0"/>
+		<TipoElemento Id="3" Nombre="Minuto Adicional Regular" IdTipoUnidad="1" EsFijo="0"/>
+		<TipoElemento Id="4" Nombre="Minuto Adicional Reducido" IdTipoUnidad="1" EsFijo="0"/>
+		<TipoElemento Id="5" Nombre="Gigas Base" IdTipoUnidad="5" EsFijo="0"/>
+		<TipoElemento Id="6" Nombre="Giga Adicional" IdTipoUnidad="1" EsFijo="0"/>	
+		<TipoElemento Id="7" Nombre="Dias de gracia para pago" IdTipoUnidad="2" EsFijo="0"/>
+		<TipoElemento Id="8" Nombre="Multa por pago atrasado" IdTipoUnidad="1" EsFijo="0"/>
+		<TipoElemento Id="9" Nombre="Costo Minuto Servicio 800" IdTipoUnidad="1" EsFijo="0"/>
+		<TipoElemento Id="10" Nombre="Costo Minuto Servicio 900" IdTipoUnidad="1" EsFijo="0"/>
+		<TipoElemento Id="11" Nombre="911" Valor="1300" IdTipoUnidad="1" EsFijo="1"/>
+		<TipoElemento Id="12" Nombre="IVA" Valor="13" IdTipoUnidad="3" EsFijo="1"/>
+		<TipoElemento Id="13" Nombre="110" Valor="20" IdTipoUnidad="1" EsFijo="1"/>
+		<TipoElemento Id="14" Nombre="Costo Minuto a Empresa X" Valor="35" IdTipoUnidad="1" EsFijo="1"/>
+		<TipoElemento Id="15" Nombre="Costo Minuto a Empresa Y" Valor="39" IdTipoUnidad="1" EsFijo="1"/>
+	</TiposElemento>
+
+
+	<ElementosDeTipoTarifa>
+		<ElementoDeTipoTarifa idTipoTarifa="1" IdTipoElemento="1" Valor="10500"/>
+		<ElementoDeTipoTarifa idTipoTarifa="1" IdTipoElemento="2" Valor="100"/>
+		<ElementoDeTipoTarifa idTipoTarifa="1" IdTipoElemento="3" Valor="5"/>
+		<ElementoDeTipoTarifa idTipoTarifa="1" IdTipoElemento="4" Valor="3"/>
+		<ElementoDeTipoTarifa idTipoTarifa="1" IdTipoElemento="5" Valor="5"/>
+		<ElementoDeTipoTarifa idTipoTarifa="1" IdTipoElemento="6" Valor="16"/>
+		<ElementoDeTipoTarifa idTipoTarifa="1" IdTipoElemento="7" Valor="7"/>
+		<ElementoDeTipoTarifa idTipoTarifa="1" IdTipoElemento="8" Valor="1500"/>
+
+
+		<ElementoDeTipoTarifa idTipoTarifa="2" IdTipoElemento="1" Valor="15500"/>
+		<ElementoDeTipoTarifa idTipoTarifa="2" IdTipoElemento="2" Valor="300"/>
+		<ElementoDeTipoTarifa idTipoTarifa="2" IdTipoElemento="3" Valor="7"/>
+		<ElementoDeTipoTarifa idTipoTarifa="2" IdTipoElemento="4" Valor="5"/>
+		<ElementoDeTipoTarifa idTipoTarifa="2" IdTipoElemento="5" Valor="10"/>
+		<ElementoDeTipoTarifa idTipoTarifa="2" IdTipoElemento="6" Valor="20"/>
+		<ElementoDeTipoTarifa idTipoTarifa="2" IdTipoElemento="7" Valor="8"/>
+		<ElementoDeTipoTarifa idTipoTarifa="2" IdTipoElemento="8" Valor="2500"/>
+
+
+		<ElementoDeTipoTarifa idTipoTarifa="3" IdTipoElemento="1" Valor="18500"/>
+		<ElementoDeTipoTarifa idTipoTarifa="3" IdTipoElemento="2" Valor="500"/>
+		<ElementoDeTipoTarifa idTipoTarifa="3" IdTipoElemento="3" Valor="9"/>
+		<ElementoDeTipoTarifa idTipoTarifa="3" IdTipoElemento="4" Valor="7"/>
+		<ElementoDeTipoTarifa idTipoTarifa="3" IdTipoElemento="5" Valor="15"/>
+		<ElementoDeTipoTarifa idTipoTarifa="3" IdTipoElemento="6" Valor="40"/>
+		<ElementoDeTipoTarifa idTipoTarifa="3" IdTipoElemento="7" Valor="9"/>
+		<ElementoDeTipoTarifa idTipoTarifa="3" IdTipoElemento="8" Valor="3500"/>
+
+
+		<ElementoDeTipoTarifa idTipoTarifa="4" IdTipoElemento="1" Valor="20000"/>
+		<ElementoDeTipoTarifa idTipoTarifa="4" IdTipoElemento="2" Valor="700"/>
+		<ElementoDeTipoTarifa idTipoTarifa="4" IdTipoElemento="3" Valor="11"/>
+		<ElementoDeTipoTarifa idTipoTarifa="4" IdTipoElemento="4" Valor="9"/>
+		<ElementoDeTipoTarifa idTipoTarifa="4" IdTipoElemento="5" Valor="25"/>
+		<ElementoDeTipoTarifa idTipoTarifa="4" IdTipoElemento="6" Valor="60"/>
+		<ElementoDeTipoTarifa idTipoTarifa="4" IdTipoElemento="7" Valor="10"/>
+		<ElementoDeTipoTarifa idTipoTarifa="4" IdTipoElemento="8" Valor="4500"/>
+
+
+		<ElementoDeTipoTarifa idTipoTarifa="5" IdTipoElemento="1" Valor="25000"/>
+		<ElementoDeTipoTarifa idTipoTarifa="5" IdTipoElemento="2" Valor="900"/>
+		<ElementoDeTipoTarifa idTipoTarifa="5" IdTipoElemento="3" Valor="15"/>
+		<ElementoDeTipoTarifa idTipoTarifa="5" IdTipoElemento="4" Valor="12"/>
+		<ElementoDeTipoTarifa idTipoTarifa="5" IdTipoElemento="5" Valor="35"/>
+		<ElementoDeTipoTarifa idTipoTarifa="5" IdTipoElemento="6" Valor="80"/>
+		<ElementoDeTipoTarifa idTipoTarifa="5" IdTipoElemento="7" Valor="11"/>
+		<ElementoDeTipoTarifa idTipoTarifa="5" IdTipoElemento="8" Valor="6500"/>
+
+
+		<ElementoDeTipoTarifa idTipoTarifa="6" IdTipoElemento="1" Valor="35000"/>
+		<ElementoDeTipoTarifa idTipoTarifa="6" IdTipoElemento="2" Valor="1100"/>
+		<ElementoDeTipoTarifa idTipoTarifa="6" IdTipoElemento="3" Valor="20"/>
+		<ElementoDeTipoTarifa idTipoTarifa="6" IdTipoElemento="4" Valor="15"/>
+		<ElementoDeTipoTarifa idTipoTarifa="6" IdTipoElemento="5" Valor="50"/>
+		<ElementoDeTipoTarifa idTipoTarifa="6" IdTipoElemento="6" Valor="100"/>
+		<ElementoDeTipoTarifa idTipoTarifa="6" IdTipoElemento="7" Valor="12"/>
+		<ElementoDeTipoTarifa idTipoTarifa="6" IdTipoElemento="8" Valor="8500"/>
+
+
+		<ElementoDeTipoTarifa idTipoTarifa="7" IdTipoElemento="9" Valor="50"/> 
+
+		<ElementoDeTipoTarifa idTipoTarifa="8" IdTipoElemento="10" Valor="100"/> 
+
+
+
+	</ElementosDeTipoTarifa>
+
+	<TipoRelacionesFamiliar>
+		<TipoRelacionFamiliar Id="1" Nombre="Hijo o Hija"/>
+		<TipoRelacionFamiliar Id="2" Nombre="Padre o Madre"/>
+		<TipoRelacionFamiliar Id="3" Nombre="Hermano o Hermana"/>
+		<TipoRelacionFamiliar Id="4" Nombre="Conyuge"/>
+
+	</TipoRelacionesFamiliar>
+
+
+</Data>
