@@ -2,7 +2,7 @@ from flask import Flask, jsonify, redirect, render_template, request, url_for
 from flask_cors import CORS
 import pyodbc
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 CORS(app)
 
 def ejecutar_stored_procedure(nombre_sp, parametros=None):
@@ -35,7 +35,8 @@ def ejecutar_stored_procedure(nombre_sp, parametros=None):
 
 @app.route('/')
 def home():
-    return "Hello, Flask!"
+    # Renderizar el HTML del menú principal
+    return render_template('menu.html')
 
 @app.route('/facturas/<telefono>', methods=['GET'])
 def facturas(telefono):
@@ -78,6 +79,7 @@ def nuevo_contrato():
     ejecutar_stored_procedure('InsertarNuevoContrato', f"{id_cliente}, '{fecha_firma}', '{tipo_telefono}', {id_tipo_tarifa}")
     return redirect(url_for('home'))
 
+
 @app.route('/nueva_llamada', methods=['POST'])
 def nueva_llamada():
     id_contrato = request.form['id_contrato']
@@ -98,16 +100,27 @@ def nuevo_uso_datos():
     ejecutar_stored_procedure('RegistrarUsoDatos', f"{id_contrato}, '{fecha}', {cantidad_gigas}")
     return redirect(url_for('home'))
 
+
 @app.route('/pagar_factura', methods=['POST'])
 def pagar_factura():
     id_contrato = request.form['id_contrato']
     ejecutar_stored_procedure('PagarFacturaPendiente', id_contrato)
     return redirect(url_for('home'))
 
+
 @app.route('/cerrar_factura', methods=['POST'])
 def cerrar_factura():
     fecha = request.form['fecha']
     ejecutar_stored_procedure('CerrarFactura', f"'{fecha}'")
+    return redirect(url_for('home'))
+
+
+@app.route('/asociar_relacion_familiar', methods=['POST'])
+def asociar_relacion_familiar():
+    id_cliente1 = request.form['id_cliente1']
+    id_cliente2 = request.form['id_cliente2']
+    tipo_relacion = request.form['tipo_relacion']
+    ejecutar_stored_procedure('AsociarRelacionFamiliar', f"{id_cliente1}, {id_cliente2}, '{tipo_relacion}'")
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
