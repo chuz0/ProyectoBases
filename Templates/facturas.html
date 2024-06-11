@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Facturas de {{ cliente.nombre }}{% endblock %}
+
+{% block content %}
+<h2>Facturas de {{ cliente.nombre }}</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fecha Emisión</th>
+            <th>Fecha Vencimiento</th>
+            <th>Monto</th>
+            <th>Estado</th>
+            <th>Detalles</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for factura in facturas %}
+        <tr>
+            <td>{{ factura.id }}</td>
+            <td>{{ factura.fecha_emision }}</td>
+            <td>{{ factura.fecha_vencimiento }}</td>
+            <td>{{ factura.monto }}</td>
+            <td>{{ factura.estado }}</td>
+            <td><a href="{{ url_for('factura_detalle', factura_id=factura.id) }}">Ver detalles</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

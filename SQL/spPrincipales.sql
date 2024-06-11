@@ -1,12 +1,6 @@
--- Eliminar el procedimiento almacenado existente si existe
-IF OBJECT_ID('InsertarNuevoCliente', 'P') IS NOT NULL
-BEGIN
-    DROP PROCEDURE InsertarNuevoCliente;
-END
-GO
 
 -- Crear el procedimiento almacenado de nuevo
-CREATE PROCEDURE InsertarNuevoCliente
+ALTER PROCEDURE InsertarNuevoCliente
     @nombre VARCHAR(255),
     @direccion VARCHAR(255),
     @telefono VARCHAR(20)
@@ -17,15 +11,9 @@ BEGIN
 END
 GO
 
--- Eliminar el procedimiento almacenado existente si existe
-IF OBJECT_ID('InsertarNuevoContrato', 'P') IS NOT NULL
-BEGIN
-    DROP PROCEDURE InsertarNuevoContrato;
-END
-GO
 
 -- Crear el procedimiento almacenado de nuevo
-CREATE PROCEDURE InsertarNuevoContrato
+ALTER PROCEDURE InsertarNuevoContrato
     @idCliente INT,
     @fechaFirma DATE,
     @tipoTelefono VARCHAR(50),
@@ -37,15 +25,9 @@ BEGIN
 END
 GO
 
--- Eliminar el procedimiento almacenado existente si existe
-IF OBJECT_ID('AsociarRelacionFamiliar', 'P') IS NOT NULL
-BEGIN
-    DROP PROCEDURE AsociarRelacionFamiliar;
-END
-GO
 
 -- Crear el procedimiento almacenado de nuevo
-CREATE PROCEDURE AsociarRelacionFamiliar
+ALTER PROCEDURE AsociarRelacionFamiliar
     @idCliente1 INT,
     @idCliente2 INT,
     @tipoRelacion VARCHAR(50)
@@ -56,15 +38,9 @@ BEGIN
 END
 GO
 
--- Eliminar el procedimiento almacenado existente si existe
-IF OBJECT_ID('RegistrarNuevaLlamada', 'P') IS NOT NULL
-BEGIN
-    DROP PROCEDURE RegistrarNuevaLlamada;
-END
-GO
 
 -- Crear el procedimiento almacenado de nuevo
-CREATE PROCEDURE RegistrarNuevaLlamada
+ALTER PROCEDURE RegistrarNuevaLlamada
     @idContrato INT,
     @fechaHoraInicio DATETIME,
     @fechaHoraFin DATETIME,
@@ -79,15 +55,9 @@ BEGIN
 END
 GO
 
--- Eliminar el procedimiento almacenado existente si existe
-IF OBJECT_ID('RegistrarUsoDatos', 'P') IS NOT NULL
-BEGIN
-    DROP PROCEDURE RegistrarUsoDatos;
-END
-GO
 
 -- Crear el procedimiento almacenado de nuevo
-CREATE PROCEDURE RegistrarUsoDatos
+ALTER PROCEDURE RegistrarUsoDatos
     @idContrato INT,
     @fecha DATETIME,
     @cantidadGigas DECIMAL(10, 2)
@@ -98,15 +68,9 @@ BEGIN
 END
 GO
 
--- Eliminar el procedimiento almacenado existente si existe
-IF OBJECT_ID('PagarFacturaPendiente', 'P') IS NOT NULL
-BEGIN
-    DROP PROCEDURE PagarFacturaPendiente;
-END
-GO
 
 -- Crear el procedimiento almacenado de nuevo
-CREATE PROCEDURE PagarFacturaPendiente
+ALTER PROCEDURE PagarFacturaPendiente
     @idContrato INT
 AS
 BEGIN
@@ -125,15 +89,10 @@ BEGIN
 END
 GO
 
--- Eliminar el procedimiento almacenado existente si existe
-IF OBJECT_ID('CerrarFactura', 'P') IS NOT NULL
-BEGIN
-    DROP PROCEDURE CerrarFactura;
-END
-GO
+
 
 -- Crear el procedimiento almacenado de nuevo
-CREATE PROCEDURE CerrarFactura
+ALTER PROCEDURE CerrarFactura
     @fecha DATE
 AS
 BEGIN
