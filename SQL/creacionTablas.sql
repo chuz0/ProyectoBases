@@ -125,9 +125,3 @@ CREATE TABLE DetalleEstadoCuentaEmpresas (
     FOREIGN KEY (IdEstadoCuenta) REFERENCES EstadoCuentaEmpresas(Id)
 );
 
-CREATE TABLE Historial_Clientes (
-    id INT PRIMARY KEY,
-    id_cliente INT,
-    accion VARCHAR(50),
-    fecha_registro DATETIME
-);

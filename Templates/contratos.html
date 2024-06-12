@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratos</title>
+</head>
+<body>
+    <h1>Contratos</h1>
+    <ul>
+        {% for contrato in contratos %}
+        <li>Contrato ID: {{ contrato.id }}, Cliente ID: {{ contrato.id_cliente }}, Fecha Firma: {{ contrato.fecha_firma }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
